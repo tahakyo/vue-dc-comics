@@ -5,7 +5,9 @@
       <AppHeader />
     </header>
     <!-- main -->
-    <main class="container">questo è main</main>
+    <main>
+      <div class="container">questo è main</div>
+    </main>
     <!-- footer -->
     <footer></footer>
   </div>
