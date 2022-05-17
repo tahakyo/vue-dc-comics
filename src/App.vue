@@ -5,7 +5,7 @@
       <AppHeader />
     </header>
     <!-- main -->
-    <main>questo è main</main>
+    <main class="container">questo è main</main>
     <!-- footer -->
     <footer></footer>
   </div>
@@ -23,4 +23,9 @@ export default {
 
 <style lang="scss">
 @import "./style/common.scss";
+main {
+  height: 150px;
+  background-color: black;
+  color: white;
+}
 </style>

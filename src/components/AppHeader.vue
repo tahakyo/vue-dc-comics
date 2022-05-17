@@ -6,16 +6,13 @@
     </div>
     <nav>
       <ul class="header__menu">
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
-        <li><a href="">link title</a></li>
+        <li
+          v-for="(item, index) in MenuLinks"
+          :key="index"
+          :class="{ active: item.active }"
+        >
+          <a href="">{{ item.text }}</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -24,6 +21,62 @@
 <script>
 export default {
   name: "AppHeader",
+  data: function () {
+    return {
+      MenuLinks: [
+        {
+          url: "#",
+          text: "Characters",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "Comics",
+          active: true,
+        },
+        {
+          url: "#",
+          text: "Movies",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "TV",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "Games",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "Collectibles",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "Videos",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "Fans",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "News",
+          active: false,
+        },
+        {
+          url: "#",
+          text: "Shop",
+          active: false,
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -45,7 +98,10 @@ export default {
     display: flex;
     li {
       margin-right: 1rem;
-      color: black;
+      color: $brand-secondary-color;
+      &.active {
+        border-bottom: 3px solid $brand-primary-color;
+      }
     }
   }
 }
