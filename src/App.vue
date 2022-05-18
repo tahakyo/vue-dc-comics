@@ -6,7 +6,7 @@
     </header>
     <!-- main -->
     <main>
-      <div class="container">questo è main</div>
+      <ProductList />
     </main>
     <!-- footer -->
     <footer></footer>
@@ -14,11 +14,13 @@
 </template>
 <script>
 import AppHeader from "./components/AppHeader.vue";
+import ProductList from "./components/ProductList.vue";
 
 export default {
   name: "App",
   components: {
     AppHeader,
+    ProductList,
   },
 };
 </script>
@@ -26,7 +28,6 @@ export default {
 <style lang="scss">
 @import "./style/common.scss";
 main {
-  height: 150px;
   background-color: black;
   color: white;
 }
