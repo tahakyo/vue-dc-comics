@@ -2,7 +2,12 @@
   <section class="products">
     <div class="container">
       <div class="products__list">
-        <AppProduct />
+        <AppProduct
+          v-for="(item, index) in products"
+          :key="index"
+          :img="item.thumb"
+          :title="item.series"
+        />
       </div>
     </div>
   </section>
@@ -108,4 +113,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.products {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+</style>
