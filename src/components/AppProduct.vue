@@ -27,6 +27,8 @@ export default {
   }
   h5 {
     padding: 0.5rem 0;
+    font-size: 0.7rem;
+    font-weight: 300;
   }
 }
 </style>

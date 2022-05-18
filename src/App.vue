@@ -6,6 +6,7 @@
     </header>
     <!-- main -->
     <main>
+      <AppBanner />
       <ProductList />
     </main>
     <!-- footer -->
@@ -15,12 +16,14 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import ProductList from "./components/ProductList.vue";
+import AppBanner from "./components/AppBanner.vue";
 
 export default {
   name: "App",
   components: {
     AppHeader,
     ProductList,
+    AppBanner,
   },
 };
 </script>
